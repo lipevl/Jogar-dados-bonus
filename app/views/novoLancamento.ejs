@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto Jogar Dados </title>
+	<link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css">
+</head>
+<body>
+	<main>
+
+		<div class="container col-12 col-sm-8 col-md-6 bg-light p-2 text-center">
+			<h1>Projeto Jogar dados</h1>
+
+			<div class="container">
+				<div class="card-deck my-2">
+					
+					<div class="col-6 p-2">
+						<div class="card">
+
+							<div class="card-header">Pontos Acumulados</div>
+							<div class="card-body"><%=pontosAcumulados%></div>
+						
+						</div>	
+											</div>
+					<div class="col-6 p-2">
+						<div class="card">
+						<div class="card-header">Número de Lançamentos</div>
+						<div class="card-body"><%= nLancamentos %></div>
+					</div>
+				</div>
+				<div class="col-12 p-2">
+						<div class="card">
+
+							<div class="card-header">Bônus</div>
+							<div class="card-body"><%=mensagem%></div>
+						
+						</div>
+						</div>	
+
+						
+
+				<div class="col-12 p-2">
+					<div class="card">
+						<div class="card-header">Lançamento</div>
+						<div class="card-body">
+							<%for (var i=0; i < lancamento.length; i++) {%>
+							<img src="img/dado<%= lancamento[i]%>.png">
+							<% } %><br><br>
+								<%= lancamento%>
+							</div>
+				</div>
+			</div>
+		
+		<div class="col-6 p-2">
+			<div class="card">
+				<div class="card-header">Jogo do lançamento</div>
+				<div class="card-body"><%= jogoLancamento %></div>
+			</div>
+		</div>
+
+		<div class="col-6 p-2">
+			<div class="card">
+				<div class="card-header">Pontuação lançamento</div>
+				<div class="card-body"><%= pontosLancamento %></div>
+
+		</div>
+	</div>
+
+</div>
+</div>
+<div style="margin-bottom: 25px;"></div>
+
+
+<center>
+
+<div class="col-3 mx auto mt-2 px-4" style="margin-top: 30px;">
+
+<button type="button" class="btn btn-success btn-block" id="buttonLancarDados">Lancar Dados</button>
+
+</div>
+
+		<div class="col-3 mx auto mt-2 px-4">
+
+		<button type="button" class="btn btn-warning btn-block" type="button" id="buttonReiniciarJogo">Reiniciar</button>
+	</div>
+
+	<div class="col-3 mx auto mt-2 px-4">
+
+		<button type="button" class="btn btn-danger btn-block" type="button" id="buttonEncerrarJogo">Encerrar</button>
+		<div class="col-6 mx auto p-4">
+		</div>
+	</center>
+</div>
+
+	</main>
+
+</body>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('#buttonLancarDados').click(function(){
+			location.href='lancarDados';
+		});
+
+		$('#buttonReiniciarJogo').click(function(){
+			location.href='reiniciar';
+		});
+
+		$('#buttonEncerrarJogo').click(function(){
+			location.href='encerrar';
+		});
+
+	});
+
+</script>
+</html>
